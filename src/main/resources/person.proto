@@ -1,0 +1,10 @@
+syntax = "proto3";
+package tutorial;
+
+option java_package = "ru.pgolovkin.protobufexample.proto";
+option java_outer_classname = "PersonPRO";
+
+message Person {
+    int32 id = 1;
+    string course_name = 2;
+}
