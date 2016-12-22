@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <spring-boot-version>1.4.2.RELEASE</spring-boot-version>
+        <google.protocolbuffers.version>3.1.0</google.protocolbuffers.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${spring-boot-version}</version>
+        <version>1.4.2.RELEASE</version>
     </parent>
 
     <groupId>ru.pgolovkin</groupId>
@@ -24,6 +24,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${google.protocolbuffers.version}</version>
         </dependency>
     </dependencies>
 
