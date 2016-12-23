@@ -1,13 +1,14 @@
-package ru.pgolovkin.protobufexample.controller;
+package ru.pgolovkin.protobufexample.proto.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.pgolovkin.protobufexample.proto.AccountPRO.Account;
+import ru.pgolovkin.protobufexample.settings.UrlConstants;
 
 @RestController
-public class AccountController {
+public class AccountProtoController {
 
-    @RequestMapping("/account")
+    @RequestMapping(UrlConstants.ACCOUNT_PROTO_URL)
     public Account getAccount() {
         Account account = Account.newBuilder().setAmount(123).setId(1).setName("acc").build();
         return account;
