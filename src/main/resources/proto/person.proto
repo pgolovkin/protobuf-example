@@ -1,4 +1,4 @@
-package tutorial;
+package protobufexample;
 
 option java_package = "ru.pgolovkin.protobufexample.proto";
 option java_outer_classname = "AddressBookPRO";

@@ -8,6 +8,7 @@
         <google.protocolbuffers.version>3.1.0</google.protocolbuffers.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <protoc.path>C:\work\study\protoc</protoc.path>
     </properties>
 
     <parent>
@@ -74,8 +75,8 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.5.0</version>
                 <configuration>
-                    <protocExecutable>C:\work\study\protoc</protocExecutable>
-                    <protoSourceRoot>src/main/resources</protoSourceRoot>
+                    <protocExecutable>${protoc.path}</protocExecutable>
+                    <protoSourceRoot>src/main/resources/proto</protoSourceRoot>
                 </configuration>
                 <executions>
                     <execution>
