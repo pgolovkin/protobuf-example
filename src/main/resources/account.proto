@@ -1,0 +1,19 @@
+package tutorial;
+
+option java_package = "ru.pgolovkin.protobufexample.proto";
+option java_outer_classname = "AccountPRO";
+
+message Account {
+    required string name = 1;
+    required int32 id = 2;
+    required uint64 amount = 3;
+
+    enum AccountType {
+        DEBIT = 0;
+        CREDIT = 1;
+    }
+}
+
+message AccountInfo {
+    repeated Account account = 1;
+}

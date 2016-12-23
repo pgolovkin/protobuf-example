@@ -1,0 +1,21 @@
+package tutorial;
+
+option java_package = "ru.pgolovkin.protobufexample.proto";
+option java_outer_classname = "DepositPRO";
+
+message Deposit {
+    required string name = 1;
+    required int32 id = 2;
+    required uint64 amount = 3;
+
+    enum DepositType {
+        LONG = 0;
+        SHORT = 1;
+    }
+
+    required DepositType accountType = 4;
+}
+
+message DepositInfo {
+    repeated Deposit deposit = 1;
+}
