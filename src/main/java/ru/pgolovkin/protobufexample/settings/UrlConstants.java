@@ -11,5 +11,4 @@ public interface UrlConstants {
     String ACCOUNT_REST_URL = REST_URL + "/account";
     String PERSON_REST_URL = REST_URL + "/person";
     String DEPOSIT_REST_URL = REST_URL + "/deposit";
-
 }
