@@ -10,7 +10,9 @@
 </head>
 <body ng-app = "ProtobufTest">
 <div ng-controller = "PersonController as pc">
-    {{pc.words}}
+    <button ng-click = "pc.getPerson()">getPerson!</button><p/>
+    {{pc.person.name}} <p/>
+    {{pc.person.id}}
 </div>
 </body>
 </html>

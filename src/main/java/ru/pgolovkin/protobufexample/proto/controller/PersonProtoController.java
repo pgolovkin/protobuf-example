@@ -25,6 +25,7 @@ public class PersonProtoController {
         try {
             response.setContentType(MediaType.APPLICATION_OCTET_STREAM.getType());
             john.writeTo(response.getOutputStream());
+            response.getOutputStream().close();
         } catch(IOException ex) {
             System.out.println(ex);
         }
