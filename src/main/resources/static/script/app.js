@@ -10,13 +10,8 @@
         var controller = this;
 
         controller.getPerson = function() {
-            $http.get("/proto/person", {responseType: "arraybuffer"}).then(function(result){
-                var Person = protobuf.load("script/proto/person.proto", function(err, root) {
-                    if (err) throw err;
-                    var person = root.lookup("protobufexample.Person");
-                    console.log(result.data);
-                    controller.person = person.decode(result.data);
-                });
+            $http.get("/proto/person", {responseType: "application/json"}).then(function(result){
+                controller.person = result.data;
             });
         }
     }
